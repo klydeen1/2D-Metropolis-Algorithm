@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		658FDB34281C85800073EA57 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB33281C85800073EA57 /* Tests_iOS.swift */; };
+		658FDB36281C85800073EA57 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB35281C85800073EA57 /* Tests_iOSLaunchTests.swift */; };
+		658FDB40281C85800073EA57 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB3F281C85800073EA57 /* Tests_macOS.swift */; };
+		658FDB42281C85810073EA57 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB41281C85810073EA57 /* Tests_macOSLaunchTests.swift */; };
+		658FDB43281C85810073EA57 /* _D_Metropolis_AlgorithmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB1B281C857F0073EA57 /* _D_Metropolis_AlgorithmApp.swift */; };
+		658FDB44281C85810073EA57 /* _D_Metropolis_AlgorithmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB1B281C857F0073EA57 /* _D_Metropolis_AlgorithmApp.swift */; };
+		658FDB45281C85810073EA57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB1C281C857F0073EA57 /* ContentView.swift */; };
+		658FDB46281C85810073EA57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB1C281C857F0073EA57 /* ContentView.swift */; };
+		658FDB47281C85810073EA57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658FDB1D281C85800073EA57 /* Assets.xcassets */; };
+		658FDB48281C85810073EA57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658FDB1D281C85800073EA57 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		658FDB30281C85800073EA57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 658FDB16281C857F0073EA57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 658FDB21281C85800073EA57;
+			remoteInfo = "2D-Metropolis-Algorithm (iOS)";
+		};
+		658FDB3C281C85800073EA57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 658FDB16281C857F0073EA57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 658FDB27281C85800073EA57;
+			remoteInfo = "2D-Metropolis-Algorithm (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		658FDB1B281C857F0073EA57 /* _D_Metropolis_AlgorithmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_Metropolis_AlgorithmApp.swift; sourceTree = "<group>"; };
+		658FDB1C281C857F0073EA57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		658FDB1D281C85800073EA57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		658FDB22281C85800073EA57 /* 2D-Metropolis-Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2D-Metropolis-Algorithm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		658FDB28281C85800073EA57 /* 2D-Metropolis-Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2D-Metropolis-Algorithm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		658FDB2A281C85800073EA57 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		658FDB2F281C85800073EA57 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		658FDB33281C85800073EA57 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		658FDB35281C85800073EA57 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		658FDB3B281C85800073EA57 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		658FDB3F281C85800073EA57 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		658FDB41281C85810073EA57 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		658FDB1F281C85800073EA57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB25281C85800073EA57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB2C281C85800073EA57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB38281C85800073EA57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		658FDB15281C857F0073EA57 = {
+			isa = PBXGroup;
+			children = (
+				658FDB1A281C857F0073EA57 /* Shared */,
+				658FDB29281C85800073EA57 /* macOS */,
+				658FDB32281C85800073EA57 /* Tests iOS */,
+				658FDB3E281C85800073EA57 /* Tests macOS */,
+				658FDB23281C85800073EA57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		658FDB1A281C857F0073EA57 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				658FDB1B281C857F0073EA57 /* _D_Metropolis_AlgorithmApp.swift */,
+				658FDB1C281C857F0073EA57 /* ContentView.swift */,
+				658FDB1D281C85800073EA57 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		658FDB23281C85800073EA57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				658FDB22281C85800073EA57 /* 2D-Metropolis-Algorithm.app */,
+				658FDB28281C85800073EA57 /* 2D-Metropolis-Algorithm.app */,
+				658FDB2F281C85800073EA57 /* Tests iOS.xctest */,
+				658FDB3B281C85800073EA57 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		658FDB29281C85800073EA57 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				658FDB2A281C85800073EA57 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		658FDB32281C85800073EA57 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				658FDB33281C85800073EA57 /* Tests_iOS.swift */,
+				658FDB35281C85800073EA57 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		658FDB3E281C85800073EA57 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				658FDB3F281C85800073EA57 /* Tests_macOS.swift */,
+				658FDB41281C85810073EA57 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		658FDB21281C85800073EA57 /* 2D-Metropolis-Algorithm (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658FDB4B281C85810073EA57 /* Build configuration list for PBXNativeTarget "2D-Metropolis-Algorithm (iOS)" */;
+			buildPhases = (
+				658FDB1E281C85800073EA57 /* Sources */,
+				658FDB1F281C85800073EA57 /* Frameworks */,
+				658FDB20281C85800073EA57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "2D-Metropolis-Algorithm (iOS)";
+			productName = "2D-Metropolis-Algorithm (iOS)";
+			productReference = 658FDB22281C85800073EA57 /* 2D-Metropolis-Algorithm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		658FDB27281C85800073EA57 /* 2D-Metropolis-Algorithm (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658FDB4E281C85810073EA57 /* Build configuration list for PBXNativeTarget "2D-Metropolis-Algorithm (macOS)" */;
+			buildPhases = (
+				658FDB24281C85800073EA57 /* Sources */,
+				658FDB25281C85800073EA57 /* Frameworks */,
+				658FDB26281C85800073EA57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "2D-Metropolis-Algorithm (macOS)";
+			productName = "2D-Metropolis-Algorithm (macOS)";
+			productReference = 658FDB28281C85800073EA57 /* 2D-Metropolis-Algorithm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		658FDB2E281C85800073EA57 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658FDB51281C85810073EA57 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				658FDB2B281C85800073EA57 /* Sources */,
+				658FDB2C281C85800073EA57 /* Frameworks */,
+				658FDB2D281C85800073EA57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				658FDB31281C85800073EA57 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 658FDB2F281C85800073EA57 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		658FDB3A281C85800073EA57 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658FDB54281C85810073EA57 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				658FDB37281C85800073EA57 /* Sources */,
+				658FDB38281C85800073EA57 /* Frameworks */,
+				658FDB39281C85800073EA57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				658FDB3D281C85800073EA57 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 658FDB3B281C85800073EA57 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		658FDB16281C857F0073EA57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					658FDB21281C85800073EA57 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					658FDB27281C85800073EA57 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					658FDB2E281C85800073EA57 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 658FDB21281C85800073EA57;
+					};
+					658FDB3A281C85800073EA57 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 658FDB27281C85800073EA57;
+					};
+				};
+			};
+			buildConfigurationList = 658FDB19281C857F0073EA57 /* Build configuration list for PBXProject "2D-Metropolis-Algorithm" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 658FDB15281C857F0073EA57;
+			productRefGroup = 658FDB23281C85800073EA57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				658FDB21281C85800073EA57 /* 2D-Metropolis-Algorithm (iOS) */,
+				658FDB27281C85800073EA57 /* 2D-Metropolis-Algorithm (macOS) */,
+				658FDB2E281C85800073EA57 /* Tests iOS */,
+				658FDB3A281C85800073EA57 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		658FDB20281C85800073EA57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658FDB47281C85810073EA57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB26281C85800073EA57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658FDB48281C85810073EA57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB2D281C85800073EA57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB39281C85800073EA57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		658FDB1E281C85800073EA57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658FDB45281C85810073EA57 /* ContentView.swift in Sources */,
+				658FDB43281C85810073EA57 /* _D_Metropolis_AlgorithmApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB24281C85800073EA57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658FDB46281C85810073EA57 /* ContentView.swift in Sources */,
+				658FDB44281C85810073EA57 /* _D_Metropolis_AlgorithmApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB2B281C85800073EA57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658FDB36281C85800073EA57 /* Tests_iOSLaunchTests.swift in Sources */,
+				658FDB34281C85800073EA57 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658FDB37281C85800073EA57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658FDB42281C85810073EA57 /* Tests_macOSLaunchTests.swift in Sources */,
+				658FDB40281C85800073EA57 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		658FDB31281C85800073EA57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 658FDB21281C85800073EA57 /* 2D-Metropolis-Algorithm (iOS) */;
+			targetProxy = 658FDB30281C85800073EA57 /* PBXContainerItemProxy */;
+		};
+		658FDB3D281C85800073EA57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 658FDB27281C85800073EA57 /* 2D-Metropolis-Algorithm (macOS) */;
+			targetProxy = 658FDB3C281C85800073EA57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		658FDB49281C85810073EA57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		658FDB4A281C85810073EA57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		658FDB4C281C85810073EA57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2AC9R5899;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IIT.-D-Metropolis-Algorithm";
+				PRODUCT_NAME = "2D-Metropolis-Algorithm";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		658FDB4D281C85810073EA57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2AC9R5899;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IIT.-D-Metropolis-Algorithm";
+				PRODUCT_NAME = "2D-Metropolis-Algorithm";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		658FDB4F281C85810073EA57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2AC9R5899;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IIT.-D-Metropolis-Algorithm";
+				PRODUCT_NAME = "2D-Metropolis-Algorithm";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		658FDB50281C85810073EA57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2AC9R5899;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IIT.-D-Metropolis-Algorithm";
+				PRODUCT_NAME = "2D-Metropolis-Algorithm";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		658FDB52281C85810073EA57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2AC9R5899;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IIT.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "2D-Metropolis-Algorithm (iOS)";
+			};
+			name = Debug;
+		};
+		658FDB53281C85810073EA57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2AC9R5899;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IIT.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "2D-Metropolis-Algorithm (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		658FDB55281C85810073EA57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2AC9R5899;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IIT.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "2D-Metropolis-Algorithm (macOS)";
+			};
+			name = Debug;
+		};
+		658FDB56281C85810073EA57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2AC9R5899;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "IIT.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "2D-Metropolis-Algorithm (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		658FDB19281C857F0073EA57 /* Build configuration list for PBXProject "2D-Metropolis-Algorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658FDB49281C85810073EA57 /* Debug */,
+				658FDB4A281C85810073EA57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658FDB4B281C85810073EA57 /* Build configuration list for PBXNativeTarget "2D-Metropolis-Algorithm (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658FDB4C281C85810073EA57 /* Debug */,
+				658FDB4D281C85810073EA57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658FDB4E281C85810073EA57 /* Build configuration list for PBXNativeTarget "2D-Metropolis-Algorithm (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658FDB4F281C85810073EA57 /* Debug */,
+				658FDB50281C85810073EA57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658FDB51281C85810073EA57 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658FDB52281C85810073EA57 /* Debug */,
+				658FDB53281C85810073EA57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658FDB54281C85810073EA57 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658FDB55281C85810073EA57 /* Debug */,
+				658FDB56281C85810073EA57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 658FDB16281C857F0073EA57 /* Project object */;
+}
