@@ -17,6 +17,16 @@
 		658FDB46281C85810073EA57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB1C281C857F0073EA57 /* ContentView.swift */; };
 		658FDB47281C85810073EA57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658FDB1D281C85800073EA57 /* Assets.xcassets */; };
 		658FDB48281C85810073EA57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658FDB1D281C85800073EA57 /* Assets.xcassets */; };
+		658FDB58281C85B00073EA57 /* IsingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB57281C85B00073EA57 /* IsingModel.swift */; };
+		658FDB59281C85B00073EA57 /* IsingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB57281C85B00073EA57 /* IsingModel.swift */; };
+		658FDB5B281C85DC0073EA57 /* OneDSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB5A281C85DC0073EA57 /* OneDSpin.swift */; };
+		658FDB5C281C85DC0073EA57 /* OneDSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB5A281C85DC0073EA57 /* OneDSpin.swift */; };
+		658FDB5E281C86460073EA57 /* DrawingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB5D281C86460073EA57 /* DrawingData.swift */; };
+		658FDB5F281C86460073EA57 /* DrawingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB5D281C86460073EA57 /* DrawingData.swift */; };
+		658FDB61281C866D0073EA57 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB60281C866D0073EA57 /* DrawingView.swift */; };
+		658FDB62281C866D0073EA57 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB60281C866D0073EA57 /* DrawingView.swift */; };
+		658FDB64281C87010073EA57 /* TwoDMetropolis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB63281C87010073EA57 /* TwoDMetropolis.swift */; };
+		658FDB65281C87010073EA57 /* TwoDMetropolis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658FDB63281C87010073EA57 /* TwoDMetropolis.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,11 @@
 		658FDB3B281C85800073EA57 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		658FDB3F281C85800073EA57 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		658FDB41281C85810073EA57 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		658FDB57281C85B00073EA57 /* IsingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsingModel.swift; sourceTree = "<group>"; };
+		658FDB5A281C85DC0073EA57 /* OneDSpin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDSpin.swift; sourceTree = "<group>"; };
+		658FDB5D281C86460073EA57 /* DrawingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingData.swift; sourceTree = "<group>"; };
+		658FDB60281C866D0073EA57 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		658FDB63281C87010073EA57 /* TwoDMetropolis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDMetropolis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +114,11 @@
 			children = (
 				658FDB1B281C857F0073EA57 /* _D_Metropolis_AlgorithmApp.swift */,
 				658FDB1C281C857F0073EA57 /* ContentView.swift */,
+				658FDB5D281C86460073EA57 /* DrawingData.swift */,
+				658FDB60281C866D0073EA57 /* DrawingView.swift */,
+				658FDB63281C87010073EA57 /* TwoDMetropolis.swift */,
+				658FDB57281C85B00073EA57 /* IsingModel.swift */,
+				658FDB5A281C85DC0073EA57 /* OneDSpin.swift */,
 				658FDB1D281C85800073EA57 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -299,8 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658FDB64281C87010073EA57 /* TwoDMetropolis.swift in Sources */,
 				658FDB45281C85810073EA57 /* ContentView.swift in Sources */,
+				658FDB5B281C85DC0073EA57 /* OneDSpin.swift in Sources */,
+				658FDB5E281C86460073EA57 /* DrawingData.swift in Sources */,
+				658FDB61281C866D0073EA57 /* DrawingView.swift in Sources */,
 				658FDB43281C85810073EA57 /* _D_Metropolis_AlgorithmApp.swift in Sources */,
+				658FDB58281C85B00073EA57 /* IsingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658FDB65281C87010073EA57 /* TwoDMetropolis.swift in Sources */,
 				658FDB46281C85810073EA57 /* ContentView.swift in Sources */,
+				658FDB5C281C85DC0073EA57 /* OneDSpin.swift in Sources */,
+				658FDB5F281C86460073EA57 /* DrawingData.swift in Sources */,
+				658FDB62281C866D0073EA57 /* DrawingView.swift in Sources */,
 				658FDB44281C85810073EA57 /* _D_Metropolis_AlgorithmApp.swift in Sources */,
+				658FDB59281C85B00073EA57 /* IsingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
