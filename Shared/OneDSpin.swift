@@ -10,6 +10,7 @@ import SwiftUI
 
 class OneDSpin: NSObject, ObservableObject {
     var spinArray: [Double] = []
+    var energy = 0.0
     
     /// hotStart
     /// Construct a 1D spin array with random spins

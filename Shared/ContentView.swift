@@ -9,9 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var myModel = TwoDMetropolis()
-    @ObservedObject var drawingData = DrawingData(withData: true)
     
-    @State var NString = "50" // Number of particles
+    @State var NString = "20" // Number of particles
     @State var tempString = "100.0" // Temperature
     @State var iterationsString = "1000" // Number of iterations for the simulation
     
@@ -26,10 +25,10 @@ struct ContentView: View {
             VStack {
                 HStack {
                     VStack(alignment: .center) {
-                        Text("Number of Particles N")
+                        Text("# Particles on One Side")
                             .font(.callout)
                             .bold()
-                        TextField("# Number of Particles", text: $NString)
+                        TextField("# Number of Particles on One Side", text: $NString)
                             .padding()
                     }
                     
@@ -78,17 +77,16 @@ struct ContentView: View {
             
             .padding()
             //DrawingField
-            //drawingView(redLayer: drawingData.spinUpData, blueLayer: drawingData.spinDownData, N: myModel.N, n: myModel.numIterations)
+            drawingView(redLayer: $myModel.drawingData.spinUpData, blueLayer: $myModel.drawingData.spinDownData, N: myModel.N, n: myModel.numIterations)
             //drawingView(redLayer: self.spinUpPoints, blueLayer: self.spinDownPoints, N: myModel.N, n: myModel.numIterations)
-            
+            /*
             ZStack{
                 drawSpins(drawingPoints: self.spinUpPoints, numParticles: myModel.N, numIterations: myModel.numIterations)
                     .stroke(Color.red)
                 
                 drawSpins(drawingPoints: self.spinDownPoints, numParticles: myModel.N, numIterations: myModel.numIterations)
                     .stroke(Color.blue)
-            }
-             
+            }*/
             .background(Color.white)
             .aspectRatio(1, contentMode: .fill)
                 .padding()
@@ -109,13 +107,14 @@ struct ContentView: View {
         myModel.setButtonEnable(state: false)
         
         myModel.printSpins = true
-        await iterate()
+        await myModel.iterateTwoDMetropolis(startType: selectedStart)
         
         myModel.setButtonEnable(state: true)
     }
     
     @MainActor func runMany() async {
         checkParameterChange()
+        self.reset()
         
         myModel.setButtonEnable(state: false)
         
@@ -123,26 +122,28 @@ struct ContentView: View {
         
         myModel.numIterations = Int(iterationsString)!
         
+        /*
         myModel.newSpinUpPoints = []
         myModel.newSpinDownPoints = []
         
         for _ in 1...Int(iterationsString)! {
             await iterate()
         }
+         */
         
-        // await myModel.runSimulation(startType: selectedStart)
+        await myModel.runSimulation(startType: selectedStart)
         
         myModel.setButtonEnable(state: true)
     }
     
+    /*
     @MainActor func iterate() async {
         await myModel.iterateTwoDMetropolis(startType: selectedStart)
         drawingData.spinUpData = myModel.newSpinUpPoints
         drawingData.spinDownData = myModel.newSpinDownPoints
-        //sleep(UInt32(2.0))
-        //print("delayed")
         updatePoints()
     }
+     */
     
     func checkParameterChange() {
         let prevN = myModel.N
@@ -154,10 +155,12 @@ struct ContentView: View {
         }
     }
     
+    /*
     func updatePoints() {
         self.spinUpPoints = drawingData.spinUpData
         self.spinDownPoints = drawingData.spinDownData
     }
+     */
     
     @MainActor func reset() {
         myModel.setButtonEnable(state: false)
@@ -168,8 +171,7 @@ struct ContentView: View {
             print("\nNew Config")
         }
         
-        drawingData.clearData()
-        updatePoints()
+        myModel.drawingData.clearData()
         
         myModel.setButtonEnable(state: true)
     }

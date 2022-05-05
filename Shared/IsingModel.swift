@@ -1,14 +1,17 @@
 //
-//  IsingModel.swift
-//  2D-Metropolis-Algorithm
+//  OneDMetropolis.swift
+//  1D-Metropolis-Algorithm
 //
-//  Created by Katelyn Lydeen on 4/29/22.
+//  Created by Katelyn Lydeen on 3/25/22.
 //
 
 import Foundation
 import SwiftUI
 
 class IsingModel: NSObject, ObservableObject {
+    // @MainActor @Published var spinUpData = [(xPoint: Double, yPoint: Double)]()
+    // @MainActor @Published var spinDownData = [(xPoint: Double, yPoint: Double)]()
+    
     @Published var OneDSpins: [Double] = []
     @Published var enableButton = true
     
@@ -16,6 +19,9 @@ class IsingModel: NSObject, ObservableObject {
     var N = 100 // Number of particles
     var numIterations = 1000
     
+    var Mj = 0.0 // Magnetization
+    var C = 0.0 // Specific heat
+    var U = 0.0 // Internal energy
     var temp = 273.15 // Temperature in Kelvin
     let J = 1.0 // The exchange energy in units 1e-21 Joules
     let kB = 0.01380649 // Boltzmann constant in units 1e-21 Joules/Kelvin
@@ -33,6 +39,10 @@ class IsingModel: NSObject, ObservableObject {
     func iterateMetropolis(startType: String) async {
         if (mySpin.spinArray.isEmpty) {
             await initializeSpin(startType: startType)
+            Mj = 0.0
+            for i in 0..<mySpin.spinArray.count {
+                Mj += mySpin.spinArray[i]
+            }
         }
 
         let newSpinArray = await metropolis(spinConfig: mySpin.spinArray)
@@ -46,10 +56,27 @@ class IsingModel: NSObject, ObservableObject {
         newSpinUpPoints = []
         newSpinDownPoints = []
         
+        var ESum = 0.0
+        var ESumCount = 0
+        var ESquaredSum = 0.0
         for x in 1...numIterations {
             await iterateMetropolis(startType: startType)
             await addSpinCoordinates(spinConfig: mySpin.spinArray, xCoord: Double(x))
+            if(x > numIterations/2) {
+                ESum += mySpin.energy
+                ESquaredSum += mySpin.energy*mySpin.energy
+                ESumCount += 1
+            }
         }
+        print("energy: \(await getConfigEnergy(spinConfig: mySpin.spinArray))")
+        print("mag: \(Mj)")
+        U = ESum / Double(ESumCount)
+        print("internal energy: \(U)")
+        let ESquaredAvg = ESquaredSum / Double(ESumCount)
+        print("energy fluctuations: \(ESquaredAvg)")
+        C = 1/Double(N*N) * (ESquaredAvg - U*U)/(kB*temp*temp)
+        print("specific heat: \(C)")
+        print()
     }
     
     /// initializeSpin
@@ -87,18 +114,21 @@ class IsingModel: NSObject, ObservableObject {
         // Get the energies of the configurations
         let trialEnergy = await getConfigEnergy(spinConfig: trialConfig)
         let prevEnergy = await getConfigEnergy(spinConfig: spinConfig)
+        let R = exp((-1.0*abs(trialEnergy - prevEnergy))/(kB * temp))
+        let r = Double.random(in: 0...1)
         
-        if (trialEnergy <= prevEnergy) {
+        // Accept if the trial energy is lower than the prev energy
+        // Otherwise, accept with relative probability R = exp(-ΔE/kB T)
+        if (trialEnergy <= prevEnergy || R >= r) {
             // Accept the trial
+            Mj += 2*trialConfig[spinToFlip]
+            mySpin.energy = trialEnergy
             return trialConfig
         }
         else {
-            // Accept with relative probability R = exp(-ΔE/kB T)
-            let R = exp((-1.0*abs(trialEnergy - prevEnergy))/(kB * temp))
-            let r = Double.random(in: 0...1)
-            // print("r is \(r) and R is \(R)")
-            if (R >= r) { return trialConfig } // Accept the trial
-            else { return spinConfig } // Reject the trial and keep the original spin config
+            // Reject the trial and keep the original spin config
+            mySpin.energy = prevEnergy
+            return spinConfig
         }
     }
     
