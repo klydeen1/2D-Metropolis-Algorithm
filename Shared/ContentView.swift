@@ -15,6 +15,9 @@ struct ContentView: View {
     @State var tempString = "100.0" // Temperature
     @State var iterationsString = "1000" // Number of iterations for the simulation
     
+    @State var spinUpPoints = [(xPoint: Double, yPoint: Double)]()
+    @State var spinDownPoints = [(xPoint: Double, yPoint: Double)]()
+    
     @State var selectedStart = "Cold"
     var startOptions = ["Cold", "Hot"]
     
@@ -75,7 +78,19 @@ struct ContentView: View {
             
             .padding()
             //DrawingField
-            drawingView(redLayer: $drawingData.spinUpData, blueLayer: $drawingData.spinDownData, N: myModel.N, n: myModel.numIterations)
+            //drawingView(redLayer: drawingData.spinUpData, blueLayer: drawingData.spinDownData, N: myModel.N, n: myModel.numIterations)
+            //drawingView(redLayer: self.spinUpPoints, blueLayer: self.spinDownPoints, N: myModel.N, n: myModel.numIterations)
+            
+            ZStack{
+                drawSpins(drawingPoints: self.spinUpPoints, numParticles: myModel.N, numIterations: myModel.numIterations)
+                    .stroke(Color.red)
+                
+                drawSpins(drawingPoints: self.spinDownPoints, numParticles: myModel.N, numIterations: myModel.numIterations)
+                    .stroke(Color.blue)
+            }
+             
+            .background(Color.white)
+            .aspectRatio(1, contentMode: .fill)
                 .padding()
                 .aspectRatio(1, contentMode: .fit)
                 .drawingGroup()
@@ -89,26 +104,23 @@ struct ContentView: View {
     }
     
     @MainActor func runAlgorithmOnce() async {
-        checkNChange()
+        checkParameterChange()
         
         myModel.setButtonEnable(state: false)
         
         myModel.printSpins = true
-        myModel.N = Int(NString)!
-        myModel.temp = Double(tempString)!
         await iterate()
         
         myModel.setButtonEnable(state: true)
     }
     
     @MainActor func runMany() async {
-        checkNChange()
+        checkParameterChange()
         
         myModel.setButtonEnable(state: false)
         
         myModel.printSpins = false
         
-        myModel.temp = Double(tempString)!
         myModel.numIterations = Int(iterationsString)!
         
         myModel.newSpinUpPoints = []
@@ -116,8 +128,6 @@ struct ContentView: View {
         
         for _ in 1...Int(iterationsString)! {
             await iterate()
-            //sleep(UInt32(1))
-            //print("running")
         }
         
         // await myModel.runSimulation(startType: selectedStart)
@@ -129,14 +139,24 @@ struct ContentView: View {
         await myModel.iterateTwoDMetropolis(startType: selectedStart)
         drawingData.spinUpData = myModel.newSpinUpPoints
         drawingData.spinDownData = myModel.newSpinDownPoints
+        //sleep(UInt32(2.0))
+        //print("delayed")
+        updatePoints()
     }
     
-    func checkNChange() {
+    func checkParameterChange() {
         let prevN = myModel.N
+        let prevT = myModel.temp
         myModel.N = Int(NString)!
-        if (prevN != myModel.N) {
+        myModel.temp = Double(tempString)!
+        if (prevN != myModel.N || prevT != myModel.temp) {
             self.reset()
         }
+    }
+    
+    func updatePoints() {
+        self.spinUpPoints = drawingData.spinUpData
+        self.spinDownPoints = drawingData.spinDownData
     }
     
     @MainActor func reset() {
@@ -149,6 +169,7 @@ struct ContentView: View {
         }
         
         drawingData.clearData()
+        updatePoints()
         
         myModel.setButtonEnable(state: true)
     }

@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct drawingView: View {
-    @Binding var redLayer : [(xPoint: Double, yPoint: Double)]
-    @Binding var blueLayer : [(xPoint: Double, yPoint: Double)]
+    //@Binding var redLayer : [(xPoint: Double, yPoint: Double)]
+    //@Binding var blueLayer : [(xPoint: Double, yPoint: Double)]
+    
+    @State var redLayer: [(xPoint: Double, yPoint: Double)]
+    @State var blueLayer: [(xPoint: Double, yPoint: Double)]
     
     var N: Int
     var n: Int
@@ -34,7 +37,7 @@ struct DrawingView_Previews: PreviewProvider {
     @State static var numIterations = 5
     
     static var previews: some View {
-        drawingView(redLayer: $redLayer, blueLayer: $blueLayer, N: numParticles, n: numIterations)
+        drawingView(redLayer: redLayer, blueLayer: blueLayer, N: numParticles, n: numIterations)
             .aspectRatio(1, contentMode: .fill)
             //.drawingGroup()
     }
