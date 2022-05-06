@@ -14,6 +14,10 @@ struct ContentView: View {
     @State var tempString = "100.0" // Temperature
     @State var iterationsString = "1000" // Number of iterations for the simulation
     
+    @State var magString = ""
+    @State var spHeatString = ""
+    @State var energyString = ""
+    
     @State var spinUpPoints = [(xPoint: Double, yPoint: Double)]()
     @State var spinDownPoints = [(xPoint: Double, yPoint: Double)]()
     
@@ -29,7 +33,6 @@ struct ContentView: View {
                             .font(.callout)
                             .bold()
                         TextField("# Number of Particles on One Side", text: $NString)
-                            .padding()
                     }
                     
                     VStack(alignment: .center) {
@@ -37,7 +40,6 @@ struct ContentView: View {
                             .font(.callout)
                             .bold()
                         TextField("# Temperature (K)", text: $tempString)
-                            .padding()
                     }
                     
                     VStack(alignment: .center) {
@@ -45,7 +47,6 @@ struct ContentView: View {
                             .font(.callout)
                             .bold()
                         TextField("# Number of Iterations", text: $iterationsString)
-                            .padding()
                     }
                 }
                 
@@ -72,6 +73,35 @@ struct ContentView: View {
                     Button("Reset", action: {Task.init{self.reset()}})
                         .padding()
                         .disabled(myModel.enableButton == false)
+                }
+                
+                VStack {
+                    Text("Results")
+                        .padding()
+                    
+                    HStack {
+                        Spacer()
+                        VStack(alignment: .center) {
+                            Text("Internal Energy")
+                                .font(.callout)
+                                .bold()
+                            TextField("# Internal Energy", text: $energyString)
+                        }
+                        
+                        VStack(alignment: .center) {
+                            Text("Magnetization")
+                                .font(.callout)
+                                .bold()
+                            TextField("# Magnetization", text: $magString)
+                        }
+                        
+                        VStack(alignment: .center) {
+                            Text("Specific Heat")
+                                .font(.callout)
+                                .bold()
+                            TextField("# Specific Heat", text: $spHeatString)
+                        }
+                    }
                 }
             }
             
@@ -132,6 +162,10 @@ struct ContentView: View {
          */
         
         await myModel.runSimulation(startType: selectedStart)
+        
+        magString = myModel.magString
+        spHeatString = myModel.spHeatString
+        energyString = myModel.energyString
         
         myModel.setButtonEnable(state: true)
     }

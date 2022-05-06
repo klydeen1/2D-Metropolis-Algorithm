@@ -45,15 +45,15 @@ class TwoDMetropolis: IsingModel {
             }
             
         }
-        print("energy: \(await getConfigEnergy(twoDSpinConfig: twoDSpinArray))")
-        print("mag: \(Mj)")
+        //print("energy: \(await getConfigEnergy(twoDSpinConfig: twoDSpinArray))")
         U = ESum / Double(ESumCount)
-        print("internal energy: \(U)")
         let ESquaredAvg = ESquaredSum / Double(ESumCount)
-        print("energy fluctuations: \(ESquaredAvg)")
+        //print("energy fluctuations: \(ESquaredAvg)")
         C = 1/Double(N*N*N*N) * (ESquaredAvg - U*U)/(kB*temp*temp)
-        print("specific heat: \(C)")
-        print()
+        
+        await updateInternalEnergyString(text: "\(U)")
+        await updateMagnetizationString(text: "\(Mj)")
+        await updateSpecificHeatString(text: "\(C)")
     }
     
     /// We index the spin matrix as [i][j]
